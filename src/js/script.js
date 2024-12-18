@@ -118,3 +118,30 @@ loadProjectsFromLocalStorage();
 
 // Adiciona o evento de submit ao formulário
 form.addEventListener('submit', addProject);
+
+// Selecionar elementos
+const chatButton = document.getElementById('chatButton');
+const chatWidget = document.getElementById('chatWidget');
+const closeChat = document.getElementById('closeChat');
+
+// Abrir a janela de chat ao clicar no botão
+chatButton.addEventListener('click', () => {
+    chatWidget.style.display = 'flex'; // Mostrar o widget
+});
+
+// Fechar a janela de chat ao clicar no botão "x"
+closeChat.addEventListener('click', () => {
+    chatWidget.style.display = 'none'; // Esconder o widget
+});
+
+// Placeholder para envio de mensagem
+const chatInput = document.getElementById('chatInput');
+const sendMessage = document.getElementById('sendMessage');
+
+sendMessage.addEventListener('click', () => {
+    const userMessage = chatInput.value.trim();
+    if (userMessage) {
+        alert(`Mensagem enviada: ${userMessage}`); // Simula envio (troque para integração futura)
+        chatInput.value = ''; // Limpa o campo
+    }
+});
