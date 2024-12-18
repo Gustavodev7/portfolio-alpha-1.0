@@ -277,3 +277,118 @@ form button:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
 }
 
+/* Botão de chat no canto inferior */
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1e1e20;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.3s;
+}
+
+.chat-button:hover {
+    transform: scale(1.1);
+}
+
+.chat-button i {
+    font-size: 24px;
+}
+
+/* Widget de chat */
+.chat-widget {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: #1e1e20;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    display: none; /* Escondido por padrão */
+    flex-direction: column;
+}
+
+/* Header do widget */
+.chat-widget-header {
+    background-color: #0e0e10;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 2px solid #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-widget-header .close-chat {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Corpo do widget */
+.chat-widget-body {
+    padding: 10px;
+    height: calc(100% - 80px); /* Altura do widget menos header e footer */
+    overflow-y: auto;
+    font-size: 14px;
+}
+
+/* Footer do widget */
+.chat-widget-footer {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-top: 2px solid #ffffff;
+}
+
+.chat-widget-footer input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.chat-widget-footer button {
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.chat-widget-footer button i {
+    margin-left: 5px;
+}
+
+.chat-icon {
+    width: 30px; /* Ajuste o tamanho da imagem */
+    height: 30px;
+    display: block;
+    margin: auto; /* Centraliza a imagem dentro do botão */
+
+}
